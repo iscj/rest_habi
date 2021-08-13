@@ -48,6 +48,8 @@ Entonces lo que hice fue unir unas claves establecidas con los datos traidos de 
 Para este servicio mi idea es agregar una tabla extra, que tenga relación con los usuario, con los inmuebles, además de agregar un campo de fecha y uno de más de me_gusta .
 Aquí se guardaría el ID del usuario, el ID del inmueble al que le dio me gusta , fecha en que se realizo la acción y el estado 1 o 0 para el campo me_gusta. Y con esto puede tener registro de cuando pudo cambiar de opinion y poder consultar por la fecha más reciente.
 
+![propuesta base de datos "me gusta"](db.png)
+
 ## Propuestas y posibles mejoras
 Para la base de datos no cambiaría el diseño actual, sin embargo ya que sería un sistema con mucha concurrencia, no estaría de más meter algún sistema de cache para que sean guardadas las consultas más recurrentes.
 De igual forma no me inclinaría por las consultas SQl en crudo, se debería aprovechar las bondades que ofrece el framework, y solo en caso de ser necesario, crear consultas SQL.
